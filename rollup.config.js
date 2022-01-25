@@ -1,5 +1,5 @@
-import typescript from 'rollup-plugin-typescript2';
-import filesize from 'rollup-plugin-filesize';
+import typescript from "@rollup/plugin-typescript";
+import fileSize from 'rollup-plugin-filesize';
 import pkg from './package.json';
 
 // 构建两个文件
@@ -9,9 +9,9 @@ export default [
     output: {
       name: pkg.name,
       file: 'dist/index.js',
-      format: 'es',
+      format: 'esm',
+      sourcemap:true,
     },
-
-    plugins: [filesize(), typescript()],
+    plugins: [fileSize(), typescript()],
   },
 ];
