@@ -10,8 +10,7 @@
   ],
   "type": "module",
   "scripts": {
-    "dev": "rollup -c -w",
-    "build": "rimraf dist && rollup -c",
+    "build": "rimraf dist && tsc",
     "jest": "yarn build && jest --coverage",
     "tslint": "tsc --noEmit --pretty"
   },
